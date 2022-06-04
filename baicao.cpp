@@ -4,8 +4,9 @@
 #include <windows.h>
 #include <stdio.h>
 #include <conio.h>
-#include <cmath>
+
 using namespace std;
+
 void menu()
 {
     cout << "--Chào mừng bạn đến sòng bài cào--\n";
@@ -68,22 +69,26 @@ int count(int a, int b, int c)
     x = defin(a);
     y = defin(b);
     z = defin(c);
-    tong = abs(x + y + z);
+    tong = x + y + z;
     if (tong == 10 || tong == 20 || tong == 30)
     {
         kq = -1;
     }
     else if (tong > 10 && tong < 20)
     {
-        kq = abs(tong - 10);
+        kq = tong - 10;
     }
-    else if (tong < 10)
+    else if (tong > 0 && tong < 10)
     {
         kq = tong;
     }
-    else if (tong > 20)
+    else if (tong > 20 && tong < 30)
     {
-        kq = abs(tong - 20);
+        kq = tong - 20;
+    }
+    else if (tong == 0)
+    {
+        kq = tong + 31;
     }
     return kq;
 }
@@ -169,8 +174,8 @@ void display()
                 }
             }
             cout << "Bạn bốc được lá: ";
-            cout << name[a[0]] << ", " << name[a[1]] << ", " << name[a[2]];
-            cout << "\nMáy bốc được: " << name[a[3]] << ", " << name[a[4]] << ", " << name[a[5]];
+            cout << name[a[0]] << ", " << name[a[1]] << ", " << name[a[2]] << ".";
+            cout << "\nMáy bốc được: " << name[a[3]] << ", " << name[a[4]] << ", " << name[a[5]] << ".";
             cout << endl;
             cout << "Kết quả: \n";
             // Result of player
@@ -178,11 +183,11 @@ void display()
             {
                 cout << "Bạn bị bù chình\n";
             }
-            else if (count(a[0], a[1], a[2]) == 0)
+            else if (count(a[0], a[1], a[2]) == 31)
             {
                 cout << "Bạn được 3 cào\n";
             }
-            else if (count(a[0], a[1], a[2]) > 0)
+            else if (count(a[0], a[1], a[2]) > 0 && count(a[0], a[1], a[2]) != 31)
             {
                 cout << "Bạn được: " << count(a[0], a[1], a[2]) << " nút." << endl;
             }
@@ -191,11 +196,11 @@ void display()
             {
                 cout << "Máy bị bù chình\n";
             }
-            else if (count(a[3], a[4], a[5]) == 0)
+            else if (count(a[3], a[4], a[5]) == 31)
             {
                 cout << "Máy được 3 cào\n";
             }
-            else if (count(a[3], a[4], a[5]) > 0)
+            else if (count(a[3], a[4], a[5]) > 0 && count(a[3], a[4], a[5]) != 31)
             {
                 cout << "Máy được: " << count(a[3], a[4], a[5]) << " nút." << endl;
             }
@@ -221,6 +226,7 @@ int main()
 {
     SetConsoleOutputCP(65001);
     display();
+    system("pause");
     system("cls");
     return 0;
 }
