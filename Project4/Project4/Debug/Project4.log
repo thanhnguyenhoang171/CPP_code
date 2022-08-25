@@ -1,0 +1,5 @@
+﻿  Source1.cpp
+d:\project4\project4\source1.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\project4\project4\source1.cpp(68): warning C4129: 'F': unrecognized character escape sequence
+  Project4.vcxproj -> D:\Project4\Debug\Project4.exe
+  Project4.vcxproj -> D:\Project4\Debug\Project4.pdb (Partial PDB)
