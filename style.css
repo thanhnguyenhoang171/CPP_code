@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #454141;
+}
+
+/* Tạo thanh điều hướng */
+#nav
+{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #181818;
+    margin: 0px auto;
+    z-index: 3;
+
+}
+ul.root > li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+ul.root > li > a {
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    color: darkgoldenrod;
+    line-height: 50px;
+    display: block;
+    text-transform: uppercase;
+    margin: 0 10px 0 10px;
+}
+ul.root > li > a:hover {
+    background: rgb(193, 58, 58);
+    color:#fff;
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+ul.brand {
+    column-count: 2;
+    width: 350px;
+    background: #181818;
+    min-height: 200px;
+    display: none;
+    position: absolute;
+}
+
+ul.brand li{
+    list-style: none;
+}
+ul.brand li a{
+    color: darkgoldenrod;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid darkgoldenrod;
+    line-height: 40px;
+    text-indent: 10px;
+}
+ul.brand li a:hover 
+{
+    background: rgb(193, 58, 58);
+        color: #fff;
+        transition: ease-in 0.35s;
+        -moz-transition: ease-in 0.35s;
+        -webkit-transition: ease-in 0.35s;
+}
+ul.root > li:hover ul.brand{
+    display: block;
+}
+#nav .nav-down-icon {
+    font-size: 12px;
+}
+/* Chủ đề */
+.topic
+{
+    border-left: 2px solid darkgoldenrod;
+    font-size:20px;
+    position: absolute;
+    top:100px;
+    color: #ffffff;
+    text-align: left;
+    z-index: 2;
+    left:70px;
+    text-shadow: 2px 2px 10px black;
+
+}
+strong 
+{
+    color: darkgoldenrod;
+    font-size:80px
+}
+/* Tạo slider ảnh */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    top:50px;
+    margin: auto;
+}
+.mySlides img {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.mySlides {
+    display: none;
+    z-index: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: darkgoldenrod;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* Phần Overview */
+#line1 {
+    margin-top: 80px;
+    width: 100%;
+    height: 5px;
+    background-color: darkgoldenrod;
+}
+#view 
+{
+    text-align: center;
+    margin-left:20px;
+   
+}
+#view h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:darkgoldenrod;
+    text-shadow: black 2px 2px 2px;
+}
+#view p, #feedback p {
+    text-indent: 30px;
+    color:#ffffff;
+    text-align: left;
+    font-weight: 100px;
+}
+#view img 
+{
+    margin-top: 50px;
+}
+#view ul {
+    color: #ffffff;
+    text-align: left;
+    margin-left:70px;
+}
+#view h4 {
+ text-indent: 30px;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 100px;
+}
+/* Phần brand */
+#brand {
+    text-align: center;
+}
+#brand h1 
+{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: darkgoldenrod;
+    text-shadow: black 2px 2px 2px;
+}
+#logo img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+#brand #porsche h1 
+{
+    text-align: left;
+    text-indent: 100px;
+}
+table {
+    color: #ffffff;
+    border: 2px solid darkgoldenrod;
+}
+table th {
+    text-align: left;
+}
+table td {
+    text-align: right;
+}
+#p718 h2 , #p718T h2, #p718S h2, #p911 h2, #p911S h2, #meq h2, #mamg h2, #mmay h2, #buv h2{
+    color: darkgoldenrod;
+    text-align: center ;
+}
+#feedback {
+    font-size: 30px;
+    text-align: left;
+}
+ul li
+{
+    text-indent: 50px;
+    color: #ffffff;
+}
+
